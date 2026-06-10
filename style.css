@@ -1,0 +1,46 @@
+/* Basic reset for consistent styling */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw; /* Viewport width */
+    height: 100vh; /* Viewport height */
+    overflow: hidden; /* Prevent scrollbars */
+    font-family: 'Open Sans', sans-serif; /* Default font */
+    color: #ECF0F1; /* Light gray text */
+    background-color: #2C3E50; /* Dark blue background */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text within container */
+}
+
+#app-container {
+    padding: 5vh; /* Padding around the content, responsive to viewport height */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+    max-width: 90vw; /* Ensure content doesn't get too wide */
+}
+
+#main-message {
+    font-family: 'Roboto', sans-serif; /* Specific font for heading */
+    font-size: 15vmin; /* Responsive font size based on the smaller of viewport width/height */
+    margin-bottom: 3vh; /* Space below the main message */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle text shadow for depth */
+    line-height: 1; /* Tighter line spacing */
+}
+
+#dynamic-info {
+    font-size: 4vmin; /* Responsive font size */
+    font-weight: 400;
+    margin-top: 3vh; /* Space above dynamic info */
+    opacity: 0.9; /* Slightly transparent */
+}
+
+/* Optional: Add a subtle animation for text appearance */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#app-container {
+    animation: fadeIn 1s ease-out forwards;
+}
